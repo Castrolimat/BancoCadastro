@@ -2,18 +2,18 @@
 {
     internal class ContaBancaria
     {
-        public string TitularConta { get; set; }
-        public string NumeroConta { get; private set; }
+        public string TitularConta { get; set; }//autoproperty
+        public int NumeroConta { get; private set; }
         public double Saldo { get; set; }
 
-        public ContaBancaria(string titularConta, string numeroConta)//construtor
+        public ContaBancaria(string titularConta, int numeroConta)//construtor
         {
             TitularConta = titularConta;
             NumeroConta = numeroConta;
 
         }
 
-        public ContaBancaria(string titularConta, string numeroConta, double saldo) : this(titularConta, numeroConta)//construtor
+        public ContaBancaria(string titularConta, int numeroConta, double saldo) : this(titularConta, numeroConta)//construtor
         {
             Saldo = saldo;
         }
