@@ -13,11 +13,11 @@
             int numeroConta = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            Console.WriteLine("Deseja fazer o depósito inicial? s/n");
+            Console.WriteLine("Deseja fazer o depósito inicial? (s/n)");
             char resp = char.Parse(Console.ReadLine());
             Console.WriteLine();
 
-            if (resp == 'n')
+            if (resp == 'n' || resp == 'N')
             {
                 cliente = new ContaBancaria(nomeTitular, numeroConta);
             }
@@ -35,7 +35,7 @@
 
             Console.Write("Valor do depósito: ");
             double valorDeposito = double.Parse(Console.ReadLine());
-            cliente.depositarDinheiro(valorDeposito);
+            cliente.DepositarDinheiro(valorDeposito);
             Console.WriteLine();
             Console.WriteLine($"Depósito de R$: {valorDeposito:F2} realizado com sucesso!");
 
@@ -44,7 +44,7 @@
 
             Console.Write("Valor do saque: ");
             double valorSaque = double.Parse(Console.ReadLine());
-            cliente.sacarDinheiro(valorSaque);
+            cliente.SacarDinheiro(valorSaque);
             Console.WriteLine();
             Console.WriteLine($"Saque de R$: {valorSaque:F2} realizado com sucesso!");
 
